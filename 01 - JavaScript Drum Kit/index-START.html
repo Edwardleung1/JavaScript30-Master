@@ -73,8 +73,20 @@
     // Using vanilla JS to add a class
     key.classList.add('playing');
   });
+
+// Now we need to make the function from the EventListener
+function removeTransition(e) {
+
+
+} 
+
+  // Adding a transitionend event to all the keys
+  const keys = document.querySelectorAll('.key');
+
+// Now we need to listen for a transitionend on each key, you must loop over every element if it's a nodeList
+// Each key gets an eventlistener added to it, which is transitionend, when it is ending we will removeTransition
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
 </script>
-
-
 </body>
 </html>
