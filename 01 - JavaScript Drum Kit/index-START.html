@@ -62,9 +62,16 @@
 <script>
   window.addEventListener('keydown', function (e) { // The event we are listening for is keydown, next we have a function which will give us an (e) event
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+
+    //Adding animation to the key 
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); // .key because that is the class name we added earlier
+
     if (!audio) return; // Stops the function from running if no audio
     audio.currentTime = 0; // Allows you to hit the audio again in quick session
     audio.play(); // If we have the audio element, we play it
+    
+    // Using vanilla JS to add a class
+    key.classList.add('playing');
   });
 </script>
 
