@@ -62,13 +62,26 @@
       background: black;
       position: absolute;
       top: 50%;
+      transform-origin: 100%; /* will put the pivot point to the very right hand side of the x axis */
+      transform: rotate(90deg); /* got all our hands pointing up and down */
+      transition: all 0.05s; /* gives us a realistic ticking feature */
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
   </style>
 
   <script>
+    // creating a function that needs to run every second
+    function setDate() {
+    // we want to grab the date
+      const now = new Date();
+    // and the seconds will be, this is getting us the seconds of the current minute
+      const seconds = now.getSeconds();
+      console.log(seconds);
+    }
 
-
+    // run every second, which is 1000ms
+    setInterval(setDate, 1000);
   </script>
 </body>
 </html>
