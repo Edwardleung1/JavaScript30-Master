@@ -73,6 +73,10 @@
   <script>
     // selecting the secondHand outside and passing it in later on
     const secondHand = document.querySelector('.second-hand');
+    // selecting the minHand outside and passing it in later on
+    const minHand = document.querySelector('.min-hand');
+    // selecting the hourHand outside and passing it in later on
+    const hourHand = document.querySelector('.hour-hand');
 
     // creating a function that needs to run every second
     function setDate() {
@@ -85,7 +89,10 @@
     // adding styles to the secondHand
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-      console.log(seconds);
+    // setting up the mins, exactly the same as the secondHand
+      const mins = now.getMinutes();
+
+      const minutesDegrees = ((mins / 60)
     }
 
     // run every second, which is 1000ms
