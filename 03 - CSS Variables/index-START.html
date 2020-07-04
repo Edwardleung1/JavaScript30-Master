@@ -33,14 +33,14 @@
     
     img {
       padding: var(--spacing);
-      background: var(--base);
+      background: var(--base);  /* adding variables to the img */
       filter: blur(var(--blur));
     }
     /*
       misc styles, nothing to do with CSS variables
     */
 
-    .hl {
+    .hl { /* adding a base variable to the hl class */
       color: var(--base);
     }
 
@@ -60,9 +60,20 @@
     input {
       width: 100px;
     }
+
   </style>
 
   <script>
+    // selecting all of our inputs on the page
+
+    const inputs = document.querySelectorAll('.controls input');
+
+
+
+
+
+
+
   </script>
 
 </body>
