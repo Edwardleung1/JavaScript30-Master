@@ -68,15 +68,19 @@
     const inputs = document.querySelectorAll('.controls input');
 
     // create our function
+    // getting the values to work by using the suffix I added earlier due to data-set ('this.dataset')
     function handleUpdate() {
-      console.log(this.value);
+      const suffix = this.dataset.sizing;
     }
 
 
-    // listen for a change event on each of the 'inputs'
+    // listen for a change event on each of the 'inputs', so I can interact with the page
     // we want to listen for the change event and when that's called, we will change handleUpdate
 
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    // added mousemove event so I can make changes by sliding the bar
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
 
 
   </script>
