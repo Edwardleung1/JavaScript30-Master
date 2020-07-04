@@ -65,13 +65,18 @@
 
   <script>
     // selecting all of our inputs on the page
-
     const inputs = document.querySelectorAll('.controls input');
 
+    // create our function
+    function handleUpdate() {
+      console.log(this.value);
+    }
 
 
+    // listen for a change event on each of the 'inputs'
+    // we want to listen for the change event and when that's called, we will change handleUpdate
 
-
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
 
 
   </script>
