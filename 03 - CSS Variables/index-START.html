@@ -71,7 +71,7 @@
     // getting the values to work by using the suffix I added earlier ('this.dataset'), displays all the data-set object
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
-    // magic happens :)
+    // magic happens, updating the variables
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 
     }
